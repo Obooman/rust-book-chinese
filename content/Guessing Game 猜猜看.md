@@ -82,13 +82,13 @@ fn main() {
 }
 ```
 
-这有好多东西！让我们一点一点地过一遍。
+这有好多东西！让我们一点一点地过一遍。我们需要获取用户输入，并接着打印结果作为输出。为此，我们需要将`io`输入输出库引入到作用域，`io`库被包含于标准库中(即`std`)。
 
 ```rust
 use std::io;
 ```
+Rust 默认只为所有程序导入很少一些功能，这些功能的集合被称为[prelude](http://doc.rust-lang.org/nightly/std/prelude/)。若它并非预先导入的标准库，你需要显式地使用`use`语句将它引入。通过引入`std::io`库你获得了一些有用的功能，例如获取用户输入的内容。
 
-我们需要获取用户输入，并接着打印结果作为输出。为此，我们需要标准库的`io`库。Rust 为所有程序只导入了很少一些东西，[‘prelude’](http://doc.rust-lang.org/nightly/std/prelude/)。如果它不在预先导入中，你将不得不直接`use`它。这还有第二个"prelude",[`io`prelude](http://doc.rust-lang.org/std/io/prelude/index.html)，它也起到了类似的作用：你引入它，它引入一系列拥有的 IO 相关的库。
 
 ```rust
 fn main() {
